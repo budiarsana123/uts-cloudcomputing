@@ -29,12 +29,12 @@ class mobilController extends Controller
     }
 
     public function edit($id){
-        $mobil = DB::table('mobil')->where('mobil_id',$id)->get();
+        $mobil = DB::table('mobil')->where('id',$id)->get();
         return view('edit',['mobil' => $mobil]);
     }
 
     public function update(Request $request){
-        DB::table('mobil')->where('mobil_id',$request->id)->update([
+        DB::table('mobil')->where('id',$request->id)->update([
             'nama_mobil' => $request->nama,
             'harga_mobil' => $request->harga,
             'tahun_mobil' => $request->tahun,
@@ -44,7 +44,7 @@ class mobilController extends Controller
     }
 
     public function hapus($id){
-	    DB::table('mobil')->where('mobil_id',$id)->delete();
+	    DB::table('mobil')->where('id',$id)->delete();
 	    return redirect('/mobil')->with('status','Data mobil berhasil dihapus');
     }
 }
