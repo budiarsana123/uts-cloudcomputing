@@ -26,7 +26,7 @@
  
                     {{ csrf_field() }}
 
-					<input type="hidden" name="mobil_id" value="{{ $m->mobil_id }}">
+					<input type="hidden" name="id" value="{{ $m->id }}">
 
                     <div class="form-group">
                         <label>Nama</label>
