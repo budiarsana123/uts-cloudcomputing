@@ -18,11 +18,11 @@
             </div>
 			@foreach($mobil as $m)
             <div class="card-body">
-                <a href="/mobil/edit/{{ $m->mobil_id }}" class="btn btn-primary">Reset</a>
+                <a href="/mobil/edit/{{ $m->id }}" class="btn btn-primary">Reset</a>
                 <br/>
                 <br/>
                     
-                <form action="/mobil/update/{{ $m->mobil_id }}" method="post">
+                <form action="/mobil/update/{{ $m->id }}" method="post">
  
                     {{ csrf_field() }}
 
